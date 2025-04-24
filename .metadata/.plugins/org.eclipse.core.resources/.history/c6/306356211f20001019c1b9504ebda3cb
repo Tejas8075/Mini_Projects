@@ -1,0 +1,11 @@
+package com.project.service;
+
+import com.project.entities.Counsellor;
+
+public interface CounsellorService {
+
+	void registerCounsellor(Counsellor counsellor);
+	
+	Counsellor loginCounsellor(String email, Integer password);
+	
+}

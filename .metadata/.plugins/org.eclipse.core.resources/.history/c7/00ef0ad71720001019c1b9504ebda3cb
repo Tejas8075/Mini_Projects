@@ -1,0 +1,14 @@
+package com.project.serviceimpl;
+
+import com.project.entities.Counsellor;
+import com.project.service.CounsellorService;
+
+public class CounsellorServiceImpl implements CounsellorService {
+
+	@Override
+	public String registerCounsellor(Counsellor counsellor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

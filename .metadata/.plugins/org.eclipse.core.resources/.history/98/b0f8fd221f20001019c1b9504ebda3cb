@@ -1,0 +1,47 @@
+package com.project.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.entities.Counsellor;
+import com.project.repository.CounsellorRepository;
+import com.project.service.CounsellorService;
+
+@Service
+public class CounsellorServiceImpl implements CounsellorService {
+
+	@Autowired
+	private CounsellorRepository counsellorRepository;
+	
+	@Override
+	public void registerCounsellor(Counsellor counsellor) {
+		// TODO Auto-generated method stub
+		
+		counsellorRepository.save(counsellor);
+
+	}
+
+	@Override
+	public Counsellor loginCounsellor(String email, Integer password) {
+		// TODO Auto-generated method stub
+		
+//		Counsellor counsellor = new Counsellor();
+//		
+//		if(email!=null && password!=null) {
+//			Counsellor counsellor = counsellorRepository.findByEmailAndPwd(email, password);
+//			return counsellor;
+//		}
+		
+		Counsellor verifycounsellor = counsellorRepository.findByEmailAndPwd(email, password);
+		
+		Counsellor counsellor = new Counsellor();
+
+		if(verifycounsellor!=null) {
+			return counsellor;
+		}
+		
+	}
+
+	
+
+}

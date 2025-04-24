@@ -1,0 +1,19 @@
+package com.project.service;
+
+import java.util.List;
+
+import com.project.entities.Enquiries;
+
+public interface EnquiriesService {
+
+	String addEnquiry(Enquiries enquiries);
+	
+//	List<Enquiries> displayEnquiriesByClassMode(String class_mode);
+//	
+//	List<Enquiries> displayEnquiriesByCourseName(String course_name);
+//
+//	List<Enquiries> displayEnquiriesByEnqStatus(String enq_status);
+	
+	List<Enquiries> displayEnquiries(String classMode, String courseName, String enqStatus);
+
+}

@@ -1,0 +1,25 @@
+package com.project.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.project.entities.Enquiries;
+
+public interface EnquiryRepository extends JpaRepository<Enquiries, Integer> {
+	
+	List<Enquiries> findByClass_mode(String class_mode);
+	
+	List<Enquiries> findByCourse_name(String course_name);
+
+	List<Enquiries> findByEnq_status(String enq_status);
+
+	List<Enquiries> findByClass_modeAndCourse_name(String class_mode, String course_name);
+
+	List<Enquiries> findByClass_modeAndEnq_status(String class_mode, String enq_status);
+
+	List<Enquiries> findByCourse_nameAndEnq_status(String course_name, String enq_status);
+
+	List<Enquiries> findByClass_modeAndCourse_nameAndEnq_status(String class_mode, String course_name, String enq_status);
+
+}

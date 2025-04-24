@@ -1,0 +1,16 @@
+package com.project.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.project.entities.Counsellor;
+
+
+public interface CounsellorRepository extends JpaRepository<Counsellor, Integer>{
+
+	Optional<Counsellor> findByEmailAndPwd(String email, Integer pwd);
+	
+	Optional<Counsellor> findByPwd(Integer pwd);
+	
+}

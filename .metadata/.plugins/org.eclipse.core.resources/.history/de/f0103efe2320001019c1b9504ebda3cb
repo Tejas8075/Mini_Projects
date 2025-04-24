@@ -1,0 +1,13 @@
+package com.project.service;
+
+import java.util.Optional;
+
+import com.project.entities.Enquiries;
+
+public interface EnquiriesService {
+
+	String addEnquiry(Enquiries enquiries);
+	
+	Optional<Enquiries> displayEnquiries(Integer enq_id);
+	
+}

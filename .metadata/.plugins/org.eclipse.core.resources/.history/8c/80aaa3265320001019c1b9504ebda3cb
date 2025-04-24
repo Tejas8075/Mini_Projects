@@ -1,0 +1,38 @@
+package com.project.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.entities.Enquiries;
+import com.project.repository.EnquiryRepository;
+import com.project.service.EnquiriesService;
+
+@Service
+public class EnquiriesServiceImpl implements EnquiriesService {
+
+	@Autowired
+	private EnquiryRepository enquiryRepository;x
+	
+	@Override
+	public String addEnquiry(Enquiries enquiries) {
+		
+		enquiryRepository.save(enquiries);
+		
+		String msg = "Enquiry added successfully";
+		
+		return msg;
+		
+	}
+
+	@Override
+	public List<Enquiries> displayEnquiries(String class_mode, String course_name, String enq_status) {
+		
+		
+		
+		return null;
+		
+	}
+
+}

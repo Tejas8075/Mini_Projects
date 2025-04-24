@@ -1,0 +1,22 @@
+package com.project.serviceimpl;
+
+import java.util.List;
+
+import com.project.entities.Enquiries;
+import com.project.service.EnquiriesService;
+
+public class EnquiriesServiceImpl implements EnquiriesService {
+
+	@Override
+	public String addEnquiry(Enquiries enquiries) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Enquiries> displayEnquiries(String class_mode, String course_name, String enq_status) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

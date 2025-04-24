@@ -1,0 +1,27 @@
+package com.project.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.project.entities.Counsellor;
+import com.project.repository.CounsellorRepository;
+import com.project.service.CounsellorService;
+
+public class CounsellorServiceImpl implements CounsellorService {
+
+	@Autowired
+	private CounsellorRepository counsellorRepository;
+	
+	@Override
+	public String registerCounsellor(Counsellor counsellor) {
+		// TODO Auto-generated method stub
+		
+		counsellorRepository.save(counsellor);
+		
+		String msg = "User registered successfully!!!";
+		
+		return msg;
+	}
+
+	
+
+}
