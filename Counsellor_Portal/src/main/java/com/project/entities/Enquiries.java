@@ -31,7 +31,7 @@ public class Enquiries {
 	private String name;
 	
 	@Column(name = "COUNSELLOR_PHONE_NO")
-	private Double phNo;
+	private Long phNo;
 	
 	@Column(name = "CLASS_MODE")
 	private String classMode;

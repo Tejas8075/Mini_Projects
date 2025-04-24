@@ -1,0 +1,17 @@
+package com.project.service;
+
+import java.util.Optional;
+
+import com.project.entities.Counsellor;
+
+public interface CounsellorService {
+
+	void registerCounsellor(Counsellor counsellor);
+	
+	Optional<Counsellor> loginCounsellor(String email, Integer password);
+	
+//	String updateCounsellor(Integer pwd, Counsellor counsellor);
+//	
+//	String deleteCounsellor(Integer pwd);
+	
+}

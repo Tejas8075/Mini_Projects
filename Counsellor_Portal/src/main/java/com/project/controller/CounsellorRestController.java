@@ -1,6 +1,5 @@
 package com.project.controller;
 
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,24 +21,24 @@ public class CounsellorRestController {
 	@Autowired
 	private CounsellorService counsellorService;
 	
-	@PostMapping
-	ResponseEntity<String> registerCounsellor(@RequestBody Counsellor counsellor){
-		
-		counsellorService.registerCounsellor(counsellor);
-		
-		String msg = "User registered successfully!!!";
-
-		return new ResponseEntity<>(msg, HttpStatus.CREATED);
-		
-	}
-	
-	@GetMapping
-	ResponseEntity<Optional<Counsellor>> loginCounsellor(@RequestParam String email, @RequestParam Integer pwd){
-		
-		Optional<Counsellor> loggedIn = counsellorService.loginCounsellor(email, pwd);
-		
-		return new ResponseEntity<Optional<Counsellor>>(loggedIn, HttpStatus.OK);
-		
-	}
+//	@PostMapping
+//	ResponseEntity<String> registerCounsellor(@RequestBody Counsellor counsellor){
+//		
+//		counsellorService.registerCounsellor(counsellor);
+//		
+//		String msg = "User registered successfully!!!";
+//
+//		return new ResponseEntity<>(msg, HttpStatus.CREATED);
+//		
+//	}
+//	
+//	@GetMapping
+//	ResponseEntity<Optional<Counsellor>> loginCounsellor(@RequestParam String email, @RequestParam Integer pwd){
+//		
+//		Optional<Counsellor> loggedIn = counsellorService.loginCounsellor(email, pwd);
+//		
+//		return new ResponseEntity<Optional<Counsellor>>(loggedIn, HttpStatus.OK);
+//		
+//	}
 	
 }

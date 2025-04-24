@@ -22,24 +22,24 @@ public class EnquiriesRestController {
 	@Autowired
 	private EnquiriesServiceImpl enquiriesServiceImpl;
 	
-	@PostMapping
-	ResponseEntity<String> addEnquiry(@RequestBody Enquiries enquiries){
-		
-		enquiriesServiceImpl.addEnquiry(enquiries);
-		
-		String msg = "Enquiry added successfully";
-		
-		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
-		
-	}
-	
-	@GetMapping
-	ResponseEntity<List<Enquiries>> dispalyEnquiry(@RequestParam String class_mode, @RequestParam String course_name, @RequestParam String enq_status){
-		
-		List<Enquiries> enquiries = enquiriesServiceImpl.displayEnquiries(class_mode, course_name, enq_status);
-		
-		return new ResponseEntity<List<Enquiries>>(enquiries, HttpStatus.OK);
-		
-	}
-	
+//	@PostMapping
+//	ResponseEntity<String> addEnquiry(@RequestBody Enquiries enquiries){
+//		
+//		enquiriesServiceImpl.addEnquiry(enquiries);
+//		
+//		String msg = "Enquiry added successfully";
+//		
+//		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
+//		
+//	}
+//	
+//	@GetMapping
+//	ResponseEntity<List<Enquiries>> dispalyEnquiry(@RequestParam String class_mode, @RequestParam String course_name, @RequestParam String enq_status){
+//		
+//		List<Enquiries> enquiries = enquiriesServiceImpl.displayEnquiries(class_mode, course_name, enq_status);
+//		
+//		return new ResponseEntity<List<Enquiries>>(enquiries, HttpStatus.OK);
+//		
+//	}
+//	
 }
